@@ -8,7 +8,7 @@
                     <a href><img style="margin-bottom:-8px;margin-right:10px;filter:invert(100%);" width="30" src="http://faculdade.ienh.com.br/Theme/CSS/icon_faculdade_gray.png" />Learn More</a>
                 </div>
             </article>
-            <video id="video" autoplay muted loop src="http://soriano.esy.es/video.mp4"></video>
+            <video id="video" autoplay muted loop src="video.mp4"></video>
         </el-col>
     </el-row>
 </template>
