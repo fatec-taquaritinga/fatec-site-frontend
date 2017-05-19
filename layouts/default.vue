@@ -14,6 +14,8 @@
   url(../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2)format('woff2');
 }
 
+.v-modal{z-index:3 !important}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -33,20 +35,6 @@
 @font-face {
 	font-family: Source Sans Pro;
 	src: url('../assets/fonts/SourceSansPro-Light.otf');
-	
-	/*
-		src: url('../assets/fonts/SourceSansPro-LightIt.otf');
-		src: url('../assets/fonts/SourceSansPro-Black.otf');
-		src: url('../assets/fonts/SourceSansPro-BlackIt.otf');
-		src: url('../assets/fonts/SourceSansPro-Bold.otf');
-		src: url('../assets/fonts/SourceSansPro-BoldIt.otf');
-		src: url('../assets/fonts/SourceSansPro-ExtraLight.otf');
-		src: url('../assets/fonts/SourceSansPro-ExtraLightIt.otf');
-		src: url('../assets/fonts/SourceSansPro-It.otf');
-		src: url('../assets/fonts/SourceSansPro-Regular.otf');
-		src: url('../assets/fonts/SourceSansPro-Semibold.otf');
-		src: url('../assets/fonts/SourceSansPro-SemiboldIt.otf');
-	*/
 }
 
 html

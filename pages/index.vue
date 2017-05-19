@@ -1,18 +1,22 @@
 <template>
-  <el-row>
+  <el-row>  
     <app-topo></app-topo>
     <app-banner></app-banner>
-    <p style="margin-top:300px"></p>
+    <app-cursos></app-cursos>
+
+    <br><br><br>
+    <img width="100%" src="../assets/bg1.jpg" />
   </el-row>
 </template>
 
 <script>
   import AppTopo from '../layouts/Topo.vue';
   import AppBanner from '../layouts/Banner.vue';
+  import AppCursos from '../layouts/Cursos.vue';
 
   export default {
     components: {
-      AppTopo, AppBanner
+      AppTopo, AppBanner, AppCursos
     }
   }
 </script>
