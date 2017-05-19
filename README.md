@@ -19,7 +19,7 @@ Grupo de estudos NEFE
 * Murilo Mazzeu
 * Gustavo Soriano
 * Jhonatas prates
-* Eduardo Malipense
+* Lucas Costa
 
 ### Encouraged By:
 * Professor Gustavo DelVechio
