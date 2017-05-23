@@ -1,7 +1,7 @@
 <template>
     <div style="margin:auto;width:80%;padding-top:30px;">
         <h1 style="text-align:center;margin-bottom:70px;">CURSOS FATEC TAQUARITINGA</h1>
-
+       
         <div class="box-row">
             <div class="box-father">
                 <div class="box-child">

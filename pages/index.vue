@@ -12,7 +12,7 @@
 <script>
   import AppTopo from '../layouts/Topo.vue';
   import AppBanner from '../layouts/Banner.vue';
-  import AppCursos from '../layouts/Cursos.vue';
+  import AppCursos from '../layouts/Cursos2.vue';
 
   export default {
     components: {
