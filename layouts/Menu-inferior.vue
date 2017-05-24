@@ -9,19 +9,44 @@
            <div class="active" :style="{opacity:opacidade, width:largura,left:distancia}" ></div>
 
            <el-popover ref="popover1" placement="bottom" width="200" trigger="hover">
-            <h2 style="cursor:pointer">
-                <p><i class="material-icons">edit_location</i> Descrição 1</p>
-                <p><i class="material-icons">beenhere</i> Descrição 2</p>
-                <p><i class="material-icons">near_me</i> Descrição 3</p>
-                <p><i class="material-icons">check</i> Descrição 4</p>
-                <p><i class="material-icons">my_location</i> Descrição 5</p>
-                <p><i class="material-icons">check</i> Descrição 6</p>
-            </h2>
+                <span class="link-popover sub-divisao-pop">Quem somos</span>
+                <span class="link-popover">Sobre a Fatec</span>
+                <span class="link-popover">Regimento e Regulamento</span>
+                <span class="link-popover">Concursos</span>
+                <span class="link-popover">WebSAI</span>
+
+                <span class="link-popover  sub-divisao-pop">Departamentos</span>
+                <span class="link-popover">Direção</span>
+                <span class="link-popover">Coordenação de Cursos</span>
+                <span class="link-popover">Diretoria de Serviços Acadêmicos</span>
+                <span class="link-popover">Diretoria de Serviços Administrativos</span>
+                <span class="link-popover">Coord. de Laboratórios de Informática</span>
+                <span class="link-popover">Coord. de Laboratórios de Produção</span>
+                <span class="link-popover">Bibspanoteca</span>
+                <span class="link-popover">Horários de funcionamento</span>
+                <span class="link-popover">Fale conosco</span>
            </el-popover>
 
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover1>Institucional</span>
 
-           <el-popover ref="popover2" placement="bottom" width="200" trigger="hover" content="Cursos"></el-popover>
+           <el-popover ref="popover2" placement="bottom" width="200" trigger="hover" content="Cursos">
+                <span class="link-popover sub-divisao-pop">Graduação presencial</span>
+
+                <span class="link-popover">Agronegócio</span>
+                <span class="link-popover">Análise e Desenvolvimento de Sistemas</span>
+                <span class="link-popover">Produção Industrial</span>
+                <span class="link-popover">Sistemas para Internet</span>
+
+                <span class="link-popover sub-divisao-pop">Graduação à distância (EAD)</span>
+                <span class="link-popover">Gestão Empresarial</span>
+
+                <span class="link-popover sub-divisao-pop">Pós-graduação</span>
+                <span class="link-popover">Especialização em Gestão da Produção Industrial</span>
+
+                <span class="link-popover sub-divisao-pop">Extensão Tecnológica</span>
+                <span class="link-popover"> Extensão Tecnológica</span>
+           </el-popover>
+
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover2>Cursos</span>
 
            <el-popover ref="popover3" placement="bottom" width="200" trigger="hover" content="Área acadêmica & serviços acadêmicos"></el-popover>
@@ -77,6 +102,14 @@
 
 
 <style>
+.link-popover{display:block;font-size:1.2em;cursor:pointer;line-height:25px;color:#4A555C;}
+.link-popover:hover{text-decoration:underline;}
+.sub-divisao-pop{color:#b01116;text-decoration:none !important;}
+.sub-divisao-pop:nth-child(even){margin-top:15px;}
+
+.el-popover{width:300px !important;}
+
+
 .active{bottom:0;border-top:3px solid #b01116;width:110px;z-index:2;position:absolute;transition:150ms ease-in-out;opacity:0;}
 #parentLogo{height:15vh;display:flex;align-items:center;}
 #parentLogo img{width:95%;height:75%;max-height:85%;}
