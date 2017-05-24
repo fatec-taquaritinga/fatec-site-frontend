@@ -5,6 +5,8 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -31,15 +33,10 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-			
-@font-face {
-	font-family: Source Sans Pro;
-	src: url('../assets/fonts/SourceSansPro-Light.otf');
-}
 
 html
 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 100%;
   box-sizing: border-box;
 }
