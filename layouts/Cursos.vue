@@ -1,105 +1,156 @@
 <template>
-    <div style="margin:auto;width:80%;padding-top:30px;">
-        <h1 style="text-align:center;margin-bottom:70px;">CURSOS FATEC TAQUARITINGA</h1>
+    <el-row>
+        <el-col id="titulo-cursos" :xs="{span:20, offset:2}"  >
+            <h1>Nossos Cursos</h1>
+            <p>Estude em uma faculdade pública, que tem credibilidade de mercado.</p>
+            <p>Na Fatec Taquaritinga você não paga mensalidade.</p>
+            <p>Escolhe entre nossos 5 cursos superiores presenciais, 1 curso a distância e 1 pós-graduação.</p>
+        </el-col>
 
-        <div class="box-row">
-            <div class="box-father">
-                <div class="box-child">
-                    <img src="../assets/cursos/agronegocio.jpg" alt="">
-                    <strong>Agronegócio</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>
-                </div>
-            </div>
+        <el-col id="cursos" :xs="{span:20, offset:2}" :sm="{span:20, offset:2}" :md="{span:20, offset:2}"  >
             
-            <div class="box-father">
-                <div class="box-child">
-                    <img src="../assets/cursos/analise-e-desenvolvimento-de-sistemas.jpg" alt="Análise e desenvolvimento de sistemas">
-                    <strong>Análise e desenvolvimento de sistemas</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/agronegocio.jpg?v=20170201" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#2bb673;">Agronegócio</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#2bb673;">Saiba Mais...</div>
                 </div>
-            </div>
-            
-            <div class="box-father no-border">
-                <div class="box-child">
-                    <img src="../assets/cursos/gestao-da-producao-industrial.jpg" alt="">
-                    <strong>Gestao da produção industrial</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>
-                </div>
-            </div>
-        </div>
+            </el-card>
 
-        <div class="box-row">
-            <div class="box-father">
-                <div class="box-child no-border">
-                    <img src="../assets/cursos/gestao-empresarial.jpg" alt="Gestão empresarial">
-                    <strong>Gestão empresarial</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>                </div>
-            </div>
-            
-            <div class="box-father">
-                <div class="box-child no-border">
-                    <img src="../assets/cursos/producao-industrial.jpg" alt="Produção industrial">
-                    <strong>Produção industrial</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/analise-e-desenvolvimento-de-sistemas.jpg?v=20170201" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#2e3192;">Análise e desenvolvimento de sistemas</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#2e3192;">Saiba Mais...</div>
                 </div>
-            </div>
-            
-            <div class="box-father no-border">
-                <div class="box-child no-border">
-                    <img src="../assets/cursos/sistemas-para-internet.jpg" alt="Sistemas para internet">
-                    <strong>Sistemas para internet</strong>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus architecto aliquid, quas cumque aspernatur perspiciatis porro unde alias sit nulla.</p>
+            </el-card>
+
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/producao-industrial.jpg?v=20170201" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#ed1c24;">Produção Industrial</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#ed1c24;">Saiba Mais...</div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </el-card>
+
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#00aeef;">Sistemas para internet</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#00aeef;">Saiba Mais...</div>
+                </div>
+            </el-card>
+
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/gestao-empresarial.jpg" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#00a79d;">Gestão Empresarial (EaD)</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#00a79d;">Saiba Mais...</div>
+                </div>
+            </el-card>
+
+            <el-card class="cards" :body-style="{padding:0}">
+                <img src="http://www.fatectq.edu.br/img/cursos/gestao-da-producao-industrial.jpg?v=201408131000" class="image" />
+                <div class="info-curso" >
+                    <h1 style="color:#a70000;">Gestão da Produção Industrial</h1>
+                    <h2><strong>Período:</strong> Tarde ou noite</h2>
+                    <div class="btn-curso" style="background-color:#a70000;" >Saiba Mais...</div>
+                </div>
+            </el-card>
+
+            
+        </el-col>
+
+
+    </el-row>
 </template>
 
 
 <style>
-    strong{text-align:center;display:block;margin-bottom:20px;margin-top:20px;}
-    strong + p {text-align:justify;}
+    .el-card{
+        margin-bottom:20px !important;
+        max-width:400px;
+        height:320px;
+    }
 
-    .box-row{
-        margin-top:20px;
+    .cards{
         width:100%;
-        display:flex;
-    }
-
-    .box-father{
-        width:33.3%;
-        height:380px;
-        border-right:1px solid #ccc;
-    }
-
-    .box-child{
         margin:auto;
-        width:90%;
-        height:390px;
-        border-bottom:1px solid #ccc;
+    }
+    .image{
+        width:100%;
+        height:200px;
     }
 
-    .box-child img{
-        width:100px;
-        height:90px;
-        display:block;
+    .info-curso h1{
+        text-align:center;
+        font-size:1.2em;
+        color:#2bb673;
+        height:30px;
+    }
+
+    .info-curso h2{
+        text-align:center;
+        color:#58595b;
+        font-size:.9em;
+        font-weight:normal;
+    }
+
+    .btn-curso{
+        width:140px;
+        color:#fff;
+        border-radius:3px;
         margin:auto;
-        border-radius:50%;
+        padding:8px;
+        text-align:center;
+        margin-bottom:30px;
+        margin-top:8px;
+        cursor:pointer;
     }
 
-    .no-border{
-        border:none;
+    #titulo-cursos{
+        min-height:200px;
+        text-align:center;
+        padding-top:30px;
+        padding-bottom:30px;
     }
 
-    /* MD */
-    @media screen and (min-width: 992px)
-    {
-        .box-father{
-            height:280px;
-        }
-
-        .box-child{
-            height:290px;
-        }
+    #titulo-cursos h1{
+        color:#b01116;
+        font-size:3em;
     }
+    #titulo-cursos p{
+        color:#4A555C;
+        font-size:1.1em;
+    }
+    
+
+
+
+/* MD */
+@media screen and (min-width: 758px)
+{
+    .el-card{
+        width:48%;
+        float:left;
+        margin-left:2%;
+    }
+}
+
+/* LG */
+@media screen and (min-width: 1100px)
+{
+    .el-card{
+        width:30%;
+        max-width:500px;
+        float:left;
+        margin-left:2%;
+    }
+}
+
 </style>
