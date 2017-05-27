@@ -56,7 +56,7 @@
 }
 
 .item-noticia{
-    width:25%;
+    width:100%;
     float:left;
     margin-bottom:30px;
 }
@@ -72,14 +72,18 @@
 
 
 /* MD */
-@media screen and (min-width: 992px)
+@media screen and (min-width: 768px)
 {
-
+    .item-noticia{
+        width:50%;
+    }
 }
 
 /* LG */
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 992px)
 {
-
+    .item-noticia{
+        width:25%;
+    }
 }
 </style>
