@@ -1,22 +1,62 @@
 <template>
   <el-row>  
+    <el-dialog :visible.sync="dialogVisible" :before-close="handleClose">
+      REALIZAR PESQUISA
+    </el-dialog>
+
     <app-topo></app-topo>
     <app-banner></app-banner>
     <app-cursos></app-cursos>
-
-    <br><br><br>
-    <img width="100%" src="../assets/bg1.jpg" />
+    <app-apoio></app-apoio>
   </el-row>
 </template>
 
 <script>
-  import AppTopo from '../layouts/Topo.vue';
+  import AppTopo   from '../layouts/Topo.vue';
   import AppBanner from '../layouts/Banner.vue';
   import AppCursos from '../layouts/Cursos.vue';
+  import AppApoio from '../layouts/Apoio.vue';
+  import Events    from '../components/Events.js'
 
   export default {
     components: {
-      AppTopo, AppBanner, AppCursos
+      AppTopo, AppBanner, AppCursos, AppApoio
+    },
+
+    data() {
+      return {
+        dialogVisible:false,
+        largura: '20%',
+        view: '0'
+      }
+    },
+
+    mounted(){
+        window.onscroll = () => {
+            let top = window.pageYOffset || document.documentElement.scrollTop
+
+            if( (top > 50) && ( window.innerWidth > 992) )
+                document.getElementById("red-menu").style.display='none'
+            else
+                document.getElementById("red-menu").style.display='block'
+        },
+
+        Events.$on('modal', ()=>{
+          this.open()
+       })
+    },
+
+    methods:{
+        open(){
+            this.dialogVisible=true
+            this.largura = '20%'
+            this.view="1"    
+        },
+        handleClose() {
+            this.dialogVisible=false
+            this.largura = '0'
+            this.view="0"
+        }
     }
   }
 </script>
