@@ -16,8 +16,6 @@
   url(../node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2)format('woff2');
 }
 
-.v-modal{z-index:3 !important}
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
