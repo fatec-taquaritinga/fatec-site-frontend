@@ -8,6 +8,8 @@
     <app-banner></app-banner>
     <app-cursos></app-cursos>
     <app-apoio></app-apoio>
+    <app-noticias></app-noticias>
+    <app-footer></app-footer>
   </el-row>
 </template>
 
@@ -16,11 +18,14 @@
   import AppBanner from '../layouts/Banner.vue';
   import AppCursos from '../layouts/Cursos.vue';
   import AppApoio from '../layouts/Apoio.vue';
+  import AppNoticias from '../layouts/Noticias.vue';
+  import AppFooter from '../layouts/Footer.vue';
+
   import Events    from '../components/Events.js'
 
   export default {
     components: {
-      AppTopo, AppBanner, AppCursos, AppApoio
+      AppTopo, AppBanner, AppCursos, AppApoio, AppNoticias, AppFooter
     },
 
     data() {

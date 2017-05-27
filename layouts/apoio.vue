@@ -8,23 +8,30 @@
 
         <div id="depoimentos">
             <div class="depo">
-                <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                <p><strong>Nome do camarada</strong></p>
-                <p>Informações adicionais</p>
+                <div class="depo-txt">
+                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                    <p><strong>Nome do camarada</strong></p>
+                    <p>Informações adicionais</p>
+                </div>
                 <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" >
             </div>
 
             <div class="depo">
-                <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                <p><strong>Nome do camarada</strong></p>
-                <p>Informações adicionais</p>
+                <div class="depo-txt">
+                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                    <p><strong>Nome do camarada</strong></p>
+                    <p>Informações adicionais</p>
+                </div>
                 <img src="http://www.fatectq.edu.br/img/cursos/gestao-empresarial.jpg" >
             </div>
 
             <div class="depo">
-                <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                <p><strong>Nome do camarada</strong></p>
-                <p>Informações adicionais</p>
+                <div class="depo-txt">
+                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                    <p><strong>Nome do camarada</strong></p>
+                    <p>Informações adicionais</p>
+                </div>
+
                 <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" >
             </div>
         </div>
@@ -68,9 +75,13 @@
         text-align:center;
     }
 
-    .depo p{
+    .depo-txt{
+        height:82%;
         text-align:justify;
         color:#ccc;
+    }
+
+    .depo-txt p{
         font-size:.4em;
     }
 
