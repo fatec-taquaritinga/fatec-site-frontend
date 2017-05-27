@@ -18,7 +18,7 @@
 
 <style>
 /* XS */
-#top{z-index:4;border-top:5px solid #941611;position:fixed;top:0;right:0;left:0;height:16vh;overflow:hidden;}
+#top{z-index:4;border-top:5px solid #941611;position:fixed;top:0;right:0;left:0;min-height:10vh;overflow:hidden;}
 
 .fundo
 {
@@ -34,16 +34,9 @@
   filter: alpha(opacity=97) progid:DXImageTransform.Microsoft.Alpha(opacity=97) progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color='#000000') progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#E6E7E8' , GradientType=0);
 }
 
-/* SM */
-@media screen and (min-width: 768px){}
-
 /* MD */
 @media screen and (min-width: 992px)
 {
   #top{border-top:none;}
 }
-
-/* LG */
-@media screen and (min-width: 1200px){}
-
 </style>
