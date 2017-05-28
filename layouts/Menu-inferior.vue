@@ -155,9 +155,5 @@
     #menu-inf span{font-size:1em;}
 }
 
-/* LG */
-@media screen and (min-width: 1200px){
-    #menu-inf span{font-size:1.1em;}
-}
 
 </style>

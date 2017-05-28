@@ -42,7 +42,7 @@
 
 <style>
     #apoio{
-        background-color:#f5f5f5;
+        background-color:#eee;
         min-height:300px;
         padding-top:50px;
         margin-top:50px;

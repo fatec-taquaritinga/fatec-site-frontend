@@ -1,33 +1,39 @@
 <template>
     <el-row>
         <el-col id="footer" :span="24">
-            <el-col class="box" :xs="24" :sm="12" :md="8" :lg="6">
-                <div class="content-box">
-                    <p style="margin-top:-11%; font-size:5em" >Fatec</p>
-                    <p style="margin-top:-10%; margin-left:51%">Taquaritinga</p>
+            <el-col class="box" :xs="{span:20, offset:2}"  :sm="{span:12, offset:0}" :md="{span:5,offset:1}" :lg="5">
+                <img src="../assets/logos/logo-footer.svg" />
+            </el-col>
+
+            <el-col class="box" :xs="{span:20, offset:2}" :sm="{span:12, offset:0}" :md="{span:5,offset:0}" :lg="5">
+                <div class="icon">
+                    <i class="material-icons">room</i>
+                </div>
+                <div class="parag">    
+                    <p> Av. Dr. Flávio Henrique Lemos, 585</p>
+                    <p>Portal Itamaracá, Taquaritinga - SP</p>
+                    <p>CEP: 15.900-000</p>
                 </div>
             </el-col>
 
-            <el-col class="box" :xs="24" :sm="12" :md="8" :lg="6">
-                <div class="content-box">
-                    <p><img src="../assets/icons-footer/room.svg">Av. Dr. Flávio Henrique Lemos, 585</p>
-                    <p class="parag">Portal Itamaracá, Taquaritinga - SP</p>
-                    <p class="parag">CEP: 15.900-000</p>
+            <el-col class="box" :xs="{span:20, offset:2}"  :sm="{span:12, offset:0}" :md="{span:5,offset:0}" :lg="5">
+               <div class="icon">
+                    <i class="material-icons">call</i>
+               </div>
+               <div class="parag">     
+                    <p> (16) 3252-5250</p>
+                    <p>(16) 3252-5152</p>
                 </div>
             </el-col>
 
-            <el-col class="box" :xs="24" :sm="12" :md="8" :lg="6">
-                <div class="content-box">
-                    <p><img src="../assets/icons-footer/phone.svg">(16) 3252-5250</p>
-                    <p class="parag">(16) 3252-5152</p>
+            <el-col class="box" :xs="{span:20, offset:2}"  :sm="{span:12, offset:0}" :md="{span:5,offset:0}" :lg="5">
+                <div class="icon">
+                    <i class="material-icons">info_outline</i>
                 </div>
-            </el-col>
-
-            <el-col class="box" :xs="24" :sm="12" :md="8" :lg="6">
-                <div class="content-box">
-                    <p><img src="../assets/icons-footer/info_outline.svg">www.fatectq.edu.br</p>
-                    <p class="parag">facebook.com/fatec-taquaritinga</p>
-                    <p class="parag">youtube.com/fatectaquaritinga</p>
+                <div class="parag">    
+                    <p> www.fatectq.edu.br</p>
+                    <p>facebook.com/fatec-taquaritinga</p>
+                    <p>youtube.com/fatectaquaritinga</p>
                 </div>
             </el-col>
 
@@ -37,25 +43,40 @@
 
 <style>
     #footer{
-        clear:both;
         background-color:#3a5461;
         color: #fff;
         display: flex;
-        flex-flow: row wrap;
+        flex-wrap:wrap;
         justify-content: center;
+        padding-bottom:60px;
     }
 
     .box {
-        display: flex;
-        flex-flow: row wrap;
+        padding-top:10%;
+        display:flex;
         justify-content: center;
-        margin-top: 5%;
-        margin-bottom: 4%;
     }
 
-    .parag {
-         margin-left: 21px;
+    .box img{
+        width:45% !important;
+        margin-top:-10%;
     }
 
-    
+
+
+    @media screen and (min-width: 992px)
+    {
+        .box img{
+            width:65% !important;
+        }
+
+        .box{
+           margin-bottom:60px;
+        }
+
+        #footer{
+            padding-bottom:0px;
+        }
+    }
+
 </style>
