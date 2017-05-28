@@ -1,7 +1,7 @@
 <template>
     <el-row >
 
-        <el-col id="parentLogo" :xs="{span:7, offset:1}" :sm="{span:4, offset:1}">
+        <el-col id="parentLogo" :xs="{span:7, offset:1}" :sm="{span:4, offset:1}" :md="{span:3, offset:2}">
             <img src="../assets/logos/logo.svg" />
         </el-col>
         
