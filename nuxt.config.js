@@ -12,10 +12,7 @@ module.exports = {
   },
   loading: { color:'darkred' },
 
-  build: {
-    vendor: ['axios','element-ui']
-  },
   plugins: [
-    { src: '~plugins/element.js', ssr: false }
+    { src: '~plugins/element.js'}
   ]
 }

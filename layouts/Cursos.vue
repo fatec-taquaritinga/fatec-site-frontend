@@ -73,18 +73,20 @@
 
 <style>
     .el-card{
-        margin-bottom:20px !important;
+        margin-bottom:20px;
         max-width:400px;
-        height:320px;
+        height:290px;
+        border-radius:10px;
     }
 
     .cards{
         width:100%;
         margin:auto;
+        margin-bottom:30px;
     }
     .image{
         width:100%;
-        height:200px;
+        height:170px;
     }
 
     .info-curso h1{
@@ -102,16 +104,22 @@
     }
 
     .btn-curso{
-        width:140px;
+        width:110px;
         color:#fff;
-        border-radius:3px;
+        border-radius:5px;
         margin:auto;
-        padding:8px;
+        padding:7px;
         text-align:center;
         margin-bottom:30px;
         margin-top:8px;
         cursor:pointer;
+        font-size:.8em;
     }
+
+    .btn-curso:hover{
+        opacity:.8;
+    }
+
 
     #titulo-cursos{
         min-height:200px;
@@ -132,25 +140,26 @@
 
 
 
-/* MD */
+
 @media screen and (min-width: 758px)
 {
     .el-card{
         width:48%;
-        float:left;
-        margin-left:2%;
+    }
+    #cursos{
+        display:flex;
+        flex-wrap:wrap;
     }
 }
 
-/* LG */
-@media screen and (min-width: 1100px)
+
+@media screen and (min-width: 992px)
 {
     .el-card{
-        width:30%;
-        max-width:500px;
-        float:left;
-        margin-left:2%;
+        width:32%;
+    }
+    .cards{
+        margin-bottom:16px;
     }
 }
-
 </style>
