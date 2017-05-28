@@ -5,7 +5,7 @@
             <img src="../assets/logos/logo.svg" />
         </el-col>
         
-        <el-col id="menu-inf"  :sm="{span:11, offset:1}" >
+        <el-col id="menu-inf"  :sm="{span:10, offset:2}" >
            <div class="active" :style="{opacity:opacidade, width:largura,left:distancia}" ></div>
 
            <el-popover ref="popover1" placement="bottom" width="265" trigger="hover">
@@ -74,7 +74,7 @@
            </el-popover>
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover3>Vestibular</span>
 
-           <span @mouseenter="animateActive" @mouseout="hideActive" >Concursos</span>
+           <span @mouseenter="animateActive" @mouseout="hideActive" >Contato</span>
         </el-col>
 
         <el-col id="logomarcas" :sm="5">
