@@ -40,10 +40,12 @@
         window.onscroll = () => {
             let top = window.pageYOffset || document.documentElement.scrollTop
 
-            if( (top > 50) && ( window.innerWidth > 992) )
-                document.getElementById("red-menu").style.display='none'
-            else
-                document.getElementById("red-menu").style.display='block'
+            if( (top > 90) && ( window.innerWidth > 992) ){
+                document.getElementById("menu-superior").style.display='none'
+
+            }else{
+                document.getElementById("menu-superior").style.display='block' 
+            }
         },
 
         Events.$on('modal', ()=>{

@@ -71,7 +71,7 @@
     .depo{
         margin-bottom:60px;
         background-color:#fff;
-        border-radius:8px;
+        border-radius:4px;
         height:200px;
         padding-top:3%;
         padding-left:3%;

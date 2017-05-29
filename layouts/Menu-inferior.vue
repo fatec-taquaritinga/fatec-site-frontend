@@ -30,16 +30,16 @@
 
            <el-popover ref="popover2" placement="bottom" width="265" trigger="hover" content="Cursos">
                 <span class="link-popover sub-divisao-pop">Graduação presencial</span>
-                <span class="link-popover">Agronegócio</span>
-                <span class="link-popover">Análise e Desenvolvimento de Sistemas</span>
-                <span class="link-popover">Produção Industrial</span>
-                <span class="link-popover">Sistemas para Internet</span>
+                <span class="link-popover"><div style="background-color:#2bb673;" class="icon-curso" ></div> Agronegócio</span>
+                <span class="link-popover"><div style="background-color:#2e3192;" class="icon-curso" ></div>Análise e Desenvolvimento de Sistemas</span>
+                <span class="link-popover"><div style="background-color:#ed1c24;" class="icon-curso" ></div>Produção Industrial</span>
+                <span class="link-popover"><div style="background-color:#00aeef;" class="icon-curso" ></div>Sistemas para Internet</span>
                 <span class="link-popover sub-divisao-pop">Graduação à distância (EAD)</span>
-                <span class="link-popover">Gestão Empresarial</span>
+                <span class="link-popover"><div style="background-color:#00a79d;" class="icon-curso" ></div>Gestão Empresarial</span>
                 <span class="link-popover sub-divisao-pop">Pós-graduação</span>
                 <span class="link-popover">Especialização em Gestão da Produção Industrial</span>
                 <span class="link-popover sub-divisao-pop">Extensão Tecnológica</span>
-                <span class="link-popover"> Extensão Tecnológica</span>
+                <span class="link-popover">Sobre a Extensão Tecnológica</span>
            </el-popover>
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover2>Cursos</span>
 
@@ -120,7 +120,14 @@
 
 
 <style>
-.link-popover{display:block;font-size:1.2em;cursor:pointer;line-height:20px;color:#4A555C;padding:1%;padding-left:5%;}
+    .icon-curso{
+        width:10px;
+        height:10px;
+        margin-right:5px;
+    }
+
+
+.link-popover{display:flex;align-items:center;font-size:1.2em;cursor:pointer;line-height:20px;color:#4A555C;padding:1%;padding-left:5%;}
 .link-popover:hover{background-color:#b01116;color:#fff;}
 .sub-divisao-pop{color:#b01116;pointer-events:none;margin-top:15px;}
 

@@ -10,7 +10,7 @@
         <el-col id="cursos" :xs="{span:20, offset:2}" :sm="{span:20, offset:2}" :md="{span:20, offset:2}"  >
             
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/agronegocio.jpg?v=20170201" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#2bb673;">Agronegócio</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -19,7 +19,7 @@
             </el-card>
 
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/analise-e-desenvolvimento-de-sistemas.jpg?v=20170201" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#2e3192;">Análise e desenvolvimento de sistemas</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -28,7 +28,7 @@
             </el-card>
 
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/producao-industrial.jpg?v=20170201" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#ed1c24;">Produção Industrial</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -37,7 +37,7 @@
             </el-card>
 
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#00aeef;">Sistemas para internet</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -46,7 +46,7 @@
             </el-card>
 
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/gestao-empresarial.jpg" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#00a79d;">Gestão Empresarial (EaD)</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -55,7 +55,7 @@
             </el-card>
 
             <el-card class="cards" :body-style="{padding:0}">
-                <img src="http://www.fatectq.edu.br/img/cursos/gestao-da-producao-industrial.jpg?v=201408131000" class="image" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#a70000;">Gestão da Produção Industrial</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
@@ -76,7 +76,6 @@
         margin-bottom:20px;
         max-width:400px;
         height:290px;
-        border-radius:10px;
     }
 
     .cards{
@@ -91,9 +90,9 @@
 
     .info-curso h1{
         text-align:center;
-        font-size:1.2em;
+        font-size:1.1em;
         color:#2bb673;
-        height:30px;
+        height:35px;
     }
 
     .info-curso h2{
