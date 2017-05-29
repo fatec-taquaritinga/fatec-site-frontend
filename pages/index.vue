@@ -3,7 +3,8 @@
     <el-dialog :visible.sync="dialogVisible" :before-close="handleClose">
       REALIZAR PESQUISA
     </el-dialog>
-
+    
+    <menu-mobile></menu-mobile>
     <app-topo></app-topo>
     <app-banner></app-banner>
     <app-cursos></app-cursos>
@@ -20,12 +21,12 @@
   import AppApoio from '../layouts/Apoio.vue';
   import AppNoticias from '../layouts/Noticias.vue';
   import AppFooter from '../layouts/Footer.vue';
-
+  import menuMobile from   '../layouts/Menu-mobile.vue';
   import Events    from '../components/Events.js'
 
   export default {
     components: {
-      AppTopo, AppBanner, AppCursos, AppApoio, AppNoticias, AppFooter
+      AppTopo, AppBanner, AppCursos, AppApoio, AppNoticias, AppFooter, menuMobile
     },
 
     data() {

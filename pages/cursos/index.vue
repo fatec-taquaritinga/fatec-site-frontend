@@ -1,6 +1,12 @@
 <template>
     <el-row>
+        <el-dialog :visible.sync="dialogVisible" :before-close="handleClose">
+            REALIZAR PESQUISA
+        </el-dialog>
+
+        <menu-mobile></menu-mobile>
         <app-topo></app-topo>
+
         <el-row class="baner-curso">
             <el-col class="contener-titulo-curso">
                 <div class="text-titulo">
@@ -90,13 +96,51 @@
     import AppTopo   from '../../layouts/Topo.vue';
     import AppApoio from '../../layouts/Apoio.vue';
     import AppFooter from '../../layouts/Footer.vue';
+    import menuMobile from '../../layouts/Menu-mobile.vue';
+    import Events    from '../../components/Events.js';
 
     export default {
         components: {
-            AppTopo, AppApoio, AppFooter
+            AppTopo, AppApoio, AppFooter, menuMobile
+        },
+        data() {
+          return {
+            dialogVisible:false,
+            largura: '20%',
+            view: '0'
+          }
+        },
+
+        mounted(){
+            window.onscroll = () => {
+                let top = window.pageYOffset || document.documentElement.scrollTop
+
+                if( (top > 90) && ( window.innerWidth > 992) ){
+                    document.getElementById("menu-superior").style.display='none'
+
+                }else{
+                    document.getElementById("menu-superior").style.display='block' 
+                }
+            },
+
+            Events.$on('modal', ()=>{
+              this.open()
+            })
+        },
+
+        methods:{
+            open(){
+                this.dialogVisible=true
+                this.largura = '20%'
+                this.view="1"    
+            },
+            handleClose() {
+                this.dialogVisible=false
+                this.largura = '0'
+                this.view="0"
+            }
         }
     }
-
 </script>
 
 <style>

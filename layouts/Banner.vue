@@ -24,5 +24,5 @@
 </script>
 
 <style>
-#banner{max-height:80vh;overflow:hidden;padding-top:10vh;}
+#banner{max-height:80vh;overflow:hidden;}
 </style>

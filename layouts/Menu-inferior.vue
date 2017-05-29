@@ -83,7 +83,7 @@
         </el-col>
 
         <el-col id="menu-mobile" :xs="{span:5, offset:10}" :sm="{span:5, offset:14}">
-            <i class="material-icons">menu</i>
+            <label for="mobile" ><i class="material-icons">menu</i></label>
         </el-col>
 
     </el-row>
