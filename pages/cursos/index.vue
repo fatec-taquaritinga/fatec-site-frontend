@@ -1,40 +1,10 @@
 <template>
     <el-row>
-        <el-dialog :visible.sync="dialogVisible" :before-close="handleClose">
-            REALIZAR PESQUISA
-        </el-dialog>
-
         <menu-mobile></menu-mobile>
         <app-topo></app-topo>
-
-        <el-row class="baner-curso">
-            <el-col class="contener-titulo-curso">
-                <div class="text-titulo">
-                    <p id="titulo-um">Curso superior de Tecnologia em</p>
-                    <p id="titulo-dois">Sistemas para Internet</p>
-                </div>
-            </el-col>
-            <img class="img-baner" src="http://blog.portalpravaler.com.br/wp-content/uploads/2015/08/curso-de-sistemas-de-informacao.jpg">
-        </el-row>
-
-        <el-row>
-            <el-col class="barra-content" :span="24">
-                <p style="color:#fff">Curso Superior de Graduação, modalidade presencial | Duração: 6 meses | Período: Manhã</p>
-            </el-col>
-        </el-row>
-
-        <el-row style="margin-top: 10vh;margin-bottom: 10vh">
-            <el-col class="content" :xs="{span:20, offset:2}" :sm="{span:20, offset:2}" :md="{span:20, offset:2}">
-                <img class="img-curso" src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201">
-                                
-                <div class="sobre-curso">
-                    <h1>Sobre o Curso</h1>
-                    <p>O curso de Sistemas para Internet forma um tecnólogo que ocupa- se do desenvolvimento de programas, de interfaces e aplicativos, do comércio e do marketing eletrônicos, além de sítios e portais para internet e intranet. Gerencia projetos de sistemas, inclusive com acesso a banco de dados, desenvolvendo projetos de aplicações para a rede mundial de computadores e integra mídias nos sítios da internet. Atua com tecnologias emergentes como computação móvel, redes sem fio e sistemas distribuídos. Cuidar da implantação, atualização, manutenção e segurança dos sistemas para internet também são suas atribuições.</p>
-                    <p>Para mais informações, acessa a <a>Matriz Curricular</a> e os <a>Planos de Ensino</a> do curso.</p>
-                </div>
-            
-            </el-col>
-        </el-row>
+        
+        <curso-banner></curso-banner>
+        <curso-content></curso-content>
 
         <app-apoio></app-apoio>
 
@@ -94,131 +64,27 @@
 
 <script>
     import AppTopo   from '../../layouts/Topo.vue';
+    import CursoBanner from '../../layouts/cursos/Banner.vue'
+    import CursoContent from '../../layouts/cursos/Content.vue'
     import AppApoio from '../../layouts/Apoio.vue';
     import AppFooter from '../../layouts/Footer.vue';
-    import menuMobile from '../../layouts/Menu-mobile.vue';
-    import Events    from '../../components/Events.js';
+    import menuMobile from   '../../layouts/Menu-mobile.vue';
 
     export default {
         components: {
-            AppTopo, AppApoio, AppFooter, menuMobile
-        },
-        data() {
-          return {
-            dialogVisible:false,
-            largura: '20%',
-            view: '0'
-          }
-        },
-
-        mounted(){
-            window.onscroll = () => {
-                let top = window.pageYOffset || document.documentElement.scrollTop
-
-                if( (top > 90) && ( window.innerWidth > 992) ){
-                    document.getElementById("menu-superior").style.display='none'
-
-                }else{
-                    document.getElementById("menu-superior").style.display='block' 
-                }
-            },
-
-            Events.$on('modal', ()=>{
-              this.open()
-            })
-        },
-
-        methods:{
-            open(){
-                this.dialogVisible=true
-                this.largura = '20%'
-                this.view="1"    
-            },
-            handleClose() {
-                this.dialogVisible=false
-                this.largura = '0'
-                this.view="0"
-            }
+            AppTopo, CursoBanner, CursoContent, AppApoio, AppFooter, menuMobile
         }
     }
+
 </script>
 
 <style>
-    .baner-curso {
-        height:94vh;
-        overflow:hidden;
-    }
-
-    .img-baner {
-        width: 100%;
-        height: 100%;
-        
-    }
-
-    .barra-content {
-       height: 6vh;
-       overflow:hidden;
-       background-color: #00a0e6;
-       line-height: 6vh;
-       display: flex;
-       flex-flow: row wrap;
-       justify-content: center;
-    }
-
+    
     #titulo-carrocel {
         height: 10vh;
         line-height: 10vh;
         font-size: 1.5em;
         margin-top: -5px;
-    }
-
-    .contener-titulo-curso {
-        background-color: #00a0e6;
-        height: 30vh;
-        width: 60vh;
-        top: 37vh;
-        right: 0;
-        float: right;
-        position: absolute;
-    }
-
-    .text-titulo {
-        color: #fff;
-        margin-left: 5vh;
-        margin-top: 5vh;
-        width: 45vh;
-    }
-
-    .text-titulo #titulo-dois {
-        font-size: 2em;
-        font-weight: bold
-    }
-
-    .content {
-        display: flex;
-        
-    }
-
-    .img-curso {
-        width: 60vh;
-        height: 45vh;
-    }
-
-    .sobre-curso {
-        margin-left: 5vh;
-    }
-
-    .sobre-curso h1 {
-        color: #00a0e6;
-    }
-
-    .sobre-curso p {
-        margin-top: 3vh;
-        text-align: justify;
-    }
-
-    .sobre-curso a {
-        color: #00a0e6;
     }
 
     .corpo-doc {
