@@ -14,7 +14,7 @@
                     <p><strong>Nome do camarada</strong></p>
                     <p>Informações adicionais</p>
                 </div>
-                <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" >
+                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
             </div>
 
             <div class="depo">
@@ -23,7 +23,7 @@
                     <p><strong>Nome do camarada</strong></p>
                     <p>Informações adicionais</p>
                 </div>
-                <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" >
+                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
             </div>
 
             <div class="depo">
@@ -32,7 +32,7 @@
                     <p><strong>Nome do camarada</strong></p>
                     <p>Informações adicionais</p>
                 </div>
-                <img src="http://www.fatectq.edu.br/img/cursos/sistemas-para-internet.jpg?v=20170201" >
+                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
             </div>
         </div>
 

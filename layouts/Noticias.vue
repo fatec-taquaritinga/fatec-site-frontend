@@ -7,15 +7,7 @@
             <div id="content-noticias">
 
                 <div class="item-noticia">
-                    <img src="http://www.andrebuzzo.com.br/wp-content/uploads/2015/10/development.jpg" >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="item-noticia">
-                    <img src="http://www1.checkexpress.com.br/wp-content/uploads/2015/10/inovacao-e-tecnologia.jpg" >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="item-noticia">
-                    <img src="http://minervaformazione.it/wp-content/uploads/2016/10/courses_28.jpg" >
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 <div class="item-noticia">
@@ -23,7 +15,15 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 <div class="item-noticia">
-                    <img src="http://docpix.net/wp-content/uploads/2016/07/Desenvolvimento-Web-FSantana-Contabilidade.jpg" >
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-noticia">
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-noticia">
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
@@ -63,6 +63,8 @@
 
 .item-noticia img{
     width:100%;
+    max-width:500px;
+    height:auto;
     border-radius:4px;
 }
 
@@ -85,9 +87,6 @@
         justify-content:space-between;
     }
 
-    .item-noticia img{
-        height:180px;
-    }
 }
 
 /* LG */
