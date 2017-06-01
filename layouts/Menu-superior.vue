@@ -20,7 +20,7 @@
                 </el-col>
 
                 <el-col :md="4" :lg="4" id="login">
-                    <div class="flex"><i class="material-icons">person</i>Área Restrita</div>                    
+                    <i class="material-icons">person</i>Área Restrita                  
                 </el-col>
 
             </el-col>
@@ -42,27 +42,24 @@
 </script>
 
 <style>
-    .flex{display:flex;align-items:center;font-size:.8em;}
-    #red-menu{display:none !important;height:4vh;background-color:#b01116;}
-    #content-red-menu{height:4vh;display:flex;justify-content:space-between;color:#fff;font-size:.8em;cursor:pointer;}
+    #red-menu{display:none;height:25px;background-color:#b01116;}
+    #content-red-menu{height:25px;display:flex;justify-content:space-between;color:#fff;font-size:.8em;cursor:pointer;}
     #content-red-menu img{filter:brightness(500%);margin-right:1%;width:12%;}
 
-    .item-red-menu{display:flex;flex-direction:row;border:none;align-items:center;justify-content:center;}
-    
+    .item-red-menu{display:flex;border:none;align-items:center;justify-content:center;}
     .item-red-menu:hover{background-color:#990c10;transition:400ms ease-in-out;}
 
-    #redeSociais{display:none;justify-content:space-around;align-items:center;color:#fff;height:2vh;margin-top:1vh;padding-left:0.5%;padding-right:0.5%;border-left:1px solid #ccc;border-right:1px solid #ccc;}
+    #redeSociais{display:none;justify-content:space-around;align-items:center;color:#fff;height:16px;margin-top:4px;border-left:1px solid #ccc;border-right:1px solid #ccc;}
     #redeSociais img{height:15px;width:9%;}
-    #login{display:none;justify-content:space-between;align-items:center;padding-left:1%;color:#fff;height:2vh;margin-top:1vh;border-left:1px solid #ccc;font-size:1.1em;}
-    #login img{width:9%;}
+    #login{display:none;align-items:center;justify-content:space-around;color:#fff;height:16px;margin-top:4px;border-left:1px solid #ccc;font-size:1em;}
 
     #pesquisar{display:none;}
-    #pesquisar i{font-size:1.7em;margin-top:12%;}
+    #pesquisar i{font-size:1.7em;}
 
 /* MD */
 @media screen and (min-width: 992px)
 {
-    #red-menu{display:block !important;}
+    #red-menu{display:block;}
     #redeSociais{display:flex;}
     #login{display:flex;}
     #pesquisar{display:block;}
@@ -71,11 +68,11 @@
 
 @media screen and (min-width: 1200px)
 {
-    .item-red-menu img{width:22% !important;}
-    #content-red-menu img:nth-child(4){width:12%;}
+    .item-red-menu img{width:18% !important;}
+    #content-red-menu img:nth-child(4){width:11%;}
     .item-red-menu:nth-child(4) img{width:22%;}
     #content-red-menu{font-size:.75em;}
-    #pesquisar i{font-size:2em;margin-top:14%;}
+    #pesquisar i{font-size:2em;}
 }
 
 </style>

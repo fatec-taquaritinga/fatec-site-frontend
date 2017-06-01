@@ -1,7 +1,13 @@
 <template>
     <el-row>
+		<el-dialog :visible.sync="dialogVisible" :before-close="handleClose">
+		  REALIZAR PESQUISA
+		</el-dialog>
+	
+		<menu-fixo></menu-fixo>
         <menu-mobile></menu-mobile>
-        <app-topo></app-topo>
+		<menu-superior></menu-superior>
+		<menu-inferior></menu-inferior>
         
         <curso-banner></curso-banner>
         <curso-content></curso-content>
@@ -63,23 +69,69 @@
 </template>
 
 <script>
-    import AppTopo   from '../../layouts/Topo.vue';
     import CursoBanner from '../../layouts/cursos/Banner.vue'
     import CursoContent from '../../layouts/cursos/Content.vue'
     import AppApoio from '../../layouts/Apoio.vue';
     import AppFooter from '../../layouts/Footer.vue';
+	import menuSuperior from '../../layouts/Menu-superior.vue';
+	import menuInferior from '../../layouts/Menu-inferior.vue';
     import menuMobile from   '../../layouts/Menu-mobile.vue';
-
+	import menuFixo from   '../../layouts/Menu-fixo.vue';
+	
+	import Events    from '../../components/Events.js'
+	  
     export default {
         components: {
-            AppTopo, CursoBanner, CursoContent, AppApoio, AppFooter, menuMobile
-        }
+            CursoBanner, CursoContent, AppApoio, AppFooter, menuSuperior, menuInferior, menuMobile, menuFixo
+        },
+		
+		data() {
+		  return {
+			dialogVisible:false,
+			largura: '20%',
+			view: '0'
+		  }
+		},
+	
+		mounted(){
+			window.onscroll = () => {
+				let top = window.pageYOffset || document.documentElement.scrollTop
+
+				if( (top > 200) && ( window.innerWidth > 992) ){
+				  document.getElementById("menu-fixo").classList.add("menu-fixo")
+
+				}else if( (top < 800) && ( window.innerWidth > 992) ){
+				  document.getElementById("menu-fixo").classList.remove("menu-fixo")
+				}
+			},
+
+			Events.$on('modal', ()=>{
+			  this.open()
+		   })
+		},
+
+		methods:{
+			open(){
+				this.dialogVisible=true
+				this.largura = '20%'
+				this.view="1"    
+			},
+			handleClose() {
+				this.dialogVisible=false
+				this.largura = '0'
+				this.view="0"
+			}
+		}
     }
 
 </script>
 
 <style>
-    
+    .menu-fixo{
+        top:0px !important;
+        transition:top 1s;
+    }
+	
     #titulo-carrocel {
         height: 10vh;
         line-height: 10vh;
