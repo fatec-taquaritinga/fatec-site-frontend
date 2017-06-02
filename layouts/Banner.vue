@@ -19,7 +19,7 @@
 </script>
 
 <style>
-    #banner{max-height:70vh;min-height:50vh;;overflow:hidden;margin-top:70px;}
+    #banner{max-height:70vh;min-height:50vh;overflow:hidden;margin-top:90px;}
     .el-banner{max-width:100%;height:auto;}
 
     @media screen and (min-width: 992px){

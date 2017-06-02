@@ -65,13 +65,13 @@
             float: left;
             margin-right: 2vh;
             margin-bottom: 2vh;
-            border-radius: 8px;
+            border-radius: 4px;
         }        
      }
 
      @media screen and (min-width:992px) { 
         .content { font-size: 1.1em; }
-        .img-content-curso { border-radius: 10px; }        
+        .img-content-curso { border-radius: 4px; }        
     }
 
 </style>

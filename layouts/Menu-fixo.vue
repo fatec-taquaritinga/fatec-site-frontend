@@ -20,35 +20,6 @@
     </el-row>
 </template>
 
-<script>
-  export default {
-    data(){
-        return{
-            menuAtivo:false,
-            opacidade:'0',
-            largura:'0px',
-            distancia:'0'
-        }
-    },
-
-    methods: {
-        animateActive(e){
-            let position = e.currentTarget.offsetLeft
-            let largura  = e.currentTarget.offsetWidth
-            if(!this.menuAtivo)this.opacidade='1'
-            this.distancia=position+'px'
-            this.largura=largura+'px'
-            this.menuAtivo = !this.menuAtivo
-        },
-
-        hideActive(){
-            this.opacidade='0'
-            this.menuAtivo = !this.menuAtivo
-        }
-    }
-  }
-</script>
-
 
 <style>
 
@@ -67,24 +38,13 @@
     background : -ms-linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(252, 252, 252, 1) 44.96%, rgba(243, 244, 244, 1) 76.21%, rgba(230, 231, 232, 1) 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E6E7E8' ,GradientType=0)";
     background : linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(252, 252, 252, 1) 44.96%, rgba(243, 244, 244, 1) 76.21%, rgba(230, 231, 232, 1) 100%);
-    opacity : 0.97;
     box-shadow : 7px 7px 50px rgba(0, 0, 0, 0.65);
     filter: alpha(opacity=97) progid:DXImageTransform.Microsoft.Alpha(opacity=97) progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color='#000000') progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#E6E7E8' , GradientType=0);
 }
 
 
-
-.icon-curso{width:10px;height:10px;margin-right:5px;}
-.link-popover{display:flex;align-items:center;font-size:1.1em;cursor:pointer;line-height:18px;color:#4A555C;padding:1%;padding-left:5%;}
-.link-popover:hover{background-color:#b01116;color:#fff;}
-.sub-divisao-pop{color:#b01116;pointer-events:none;margin-top:8px;text-transform:uppercase;}
-
-.el-popover{padding:0;border:none;}
-
-.active{bottom:0;border-top:3px solid #b01116;width:110px;z-index:2;position:absolute;transition:150ms ease-in-out;opacity:0;}
-
-#box-logo{height:80px;display:flex;align-items:center;}
-#box-logo img{width:95%;height:75%;max-height:80%;}
+#box-logo{height:72px;display:flex;align-items:center;}
+#box-logo img{width:70%;height:60%;max-height:80%;}
 
 #child-menu-fixed{display:none;height:74px;font-size:.9em;color:#4A555C;}
 #child-menu-fixed span{z-index:3;height:100%;padding-left:2%;display:flex;align-items:center;padding-right:2%;cursor:pointer;text-align:center;}
@@ -94,8 +54,8 @@
 #call-menu-mobile i{padding:3%;font-size:2.3em;color:#b01116;cursor:pointer;}
 
 #box-gov{display:none;height:70px;justify-content:flex-end;}
-#box-gov img:first-child{width:20%;margin-right:2%;}
-#box-gov img:last-child{width:45%;margin-left:2%;}
+#box-gov img:first-child{width:18%;margin-right:2%;}
+#box-gov img:last-child{width:40%;margin-left:2%;}
 
 
 
