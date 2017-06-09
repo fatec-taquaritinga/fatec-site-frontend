@@ -6,9 +6,10 @@
                 <p class="antes-titulo">Curso superior de Tecnologia em</p>
                 <p class="titulo">Sistemas para Internet</p>
             </div>
-            <div class="barra-banner">
+            
+        </el-col>
+        <el-col class="barra-banner" :span="24">
                 <p>Curso Superior de Graduação, modalidade presencial | Duração: 6 meses | Período: Manhã</p>
-            </div>
         </el-col>
     </el-row>        
 </template>
@@ -26,7 +27,7 @@
     }
 
     .img-banner {
-        width: 100%;       
+        width: 100%;      
     }
 
     .barra-banner {
@@ -38,6 +39,7 @@
         text-align: center;
         display: block;
         padding: 1%;
+        box-shadow: 0px -25px 20px rgba(0, 0, 0, 0.4);
     }
 
     .box-titulo {
@@ -82,8 +84,8 @@
     }
 
     @media screen and (min-width:768px) {
-        .banner { height: 100vh; }
-        .img-banner { height: 94vh; }
+        .banner {height: 94vh;}
+        .barra-banner {height: 6vh; margin-top: 0;}
         .box-titulo { width: 40%; }
         .antes-titulo { font-size: 1.3em; }
         .titulo { font-size: 2.8em; }
