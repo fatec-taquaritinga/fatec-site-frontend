@@ -1,43 +1,54 @@
 <template>
-    <el-col id="apoio" :xs="24">
-        <h1>Empresas apoiadoras</h1>
-        <p>Conheça empresas que apoiam Fatec Taquaritinga</p>
+    <el-row>
+        <el-col id="apoio" :xs="24">
+            <h1>Empresas apoiadoras</h1>
+            <p>Conheça empresas que apoiam Fatec Taquaritinga</p>
 
-        <!--( carrossel de imagens de parceiros )-->
-        <div style="margin-top:40px;width:80%;height:80px;margin:auto;background:#fff;"></div>
+            <!--( carrossel de imagens de parceiros )-->
+            <!--<div style="margin-top:40px;width:80%;height:80px;margin:auto;background:#fff;"></div>-->
+            <carrocel-parceiros></carrocel-parceiros>
 
-        <div id="depoimentos">
+            <div id="depoimentos">
 
-            <div class="depo">
-                <div class="depo-txt">
-                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                    <p><strong>Nome do camarada</strong></p>
-                    <p>Informações adicionais</p>
+                <div class="depo">
+                    <div class="depo-txt">
+                        <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                        <p><strong>Nome do camarada</strong></p>
+                        <p>Informações adicionais</p>
+                    </div>
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
                 </div>
-                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
+
+                <div class="depo">
+                    <div class="depo-txt">
+                        <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                        <p><strong>Nome do camarada</strong></p>
+                        <p>Informações adicionais</p>
+                    </div>
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
+                </div>
+
+                <div class="depo">
+                    <div class="depo-txt">
+                        <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
+                        <p><strong>Nome do camarada</strong></p>
+                        <p>Informações adicionais</p>
+                    </div>
+                    <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
+                </div>
             </div>
 
-            <div class="depo">
-                <div class="depo-txt">
-                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                    <p><strong>Nome do camarada</strong></p>
-                    <p>Informações adicionais</p>
-                </div>
-                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
-            </div>
-
-            <div class="depo">
-                <div class="depo-txt">
-                    <p>"A fatec Taquaritinga me ajudou a construir um futuro.Sou formado em sistemas para internet e consegui muitas oportunidades."</p>
-                    <p><strong>Nome do camarada</strong></p>
-                    <p>Informações adicionais</p>
-                </div>
-                <img src="http://www.ingaia.com.br/wp-content/uploads/2017/01/tecnologia-os-5-beneficios-da-computacao-em-nuvem-para-as-imobiliarias-1.jpeg" >
-            </div>
-        </div>
-
-    </el-col>
+        </el-col>
+    </el-row>
 </template>
+
+<script>
+    import CarrocelParceiros from './Carrocel-parceiros.vue'
+
+    export default {
+        components: { CarrocelParceiros }
+    }
+</script>
 
 
 <style>
