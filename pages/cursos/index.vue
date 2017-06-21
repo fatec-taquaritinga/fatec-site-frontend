@@ -7,7 +7,7 @@
        <app-apoio></app-apoio>
        <curso-carrocel></curso-carrocel>
        <corpo-docente></corpo-docente>
-       
+       <app-footer></app-footer>
     </el-row> 
 </template>
 
