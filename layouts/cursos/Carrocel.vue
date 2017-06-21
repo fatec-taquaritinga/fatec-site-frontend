@@ -5,15 +5,14 @@
             <h1>Estrutura Física</h1>
             <p>Salas e Laboratórios na Fatec Taquaritinga.</p>
         
-            <el-carousel class="carousel" trigger="click" arrow="always" height="62vh">
+            <el-carousel class="carousel" trigger="click" arrow="always" height="72vh">
                 <el-carousel-item class="carousel-item" v-for="img in images" :key="img">
-                    <img :src="img.src" :alt="img.alt"/>
+                    <img :src="img.src" :alt="img.alt" class="item-img"/>
+                    <p class="info-img">{{img.alt}}</p>
                 </el-carousel-item>
             </el-carousel>
 
-            <div class="info-img">
-                <p>{{}}</p>
-            </div>
+            
         </el-col>
     </el-row>
 </template>
@@ -30,6 +29,7 @@
             }
         }
     }
+    
 </script>
 
 <style>
@@ -37,9 +37,7 @@
         background-color: #fff;
         text-align: center;
         font-size: 1em;
-    }
-
-   
+    }   
 
     h1 {
         color: #00a0e6;
@@ -48,21 +46,27 @@
 
     .carousel {
         margin-top: 2vh;
+    }   
+    
+    .item-img {
+        width: 100%;
+        height: auto;
     }
 
-    .carousel-item img {
-        width: 100%;
-    }
-    
     .info-img {
-        height: 6vh;
         background-color: #00a0e6;
         color: #fff;
+        width: 100%;
+        height: 6vh;
         line-height: 6vh;
+        bottom: 0;
+        position: fixed
     }
 
     .el-carousel__button {
-        height: 30px;
+        width: 25px;
+        height: 25px;
         border-radius: 50%;
+        margin-bottom: 5vh;
     }
 </style>
