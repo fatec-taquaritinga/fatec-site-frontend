@@ -91,4 +91,15 @@
         top:0px !important;
         transition:top 1s;
     }
+
+	.barra-banner {
+        width: 100%;
+        height: 8%;
+        background-color: #00a0e6;
+        color: #fff;
+		font-size: 1.1em;
+        text-align: center;
+        display: block;
+        padding: 1%;
+    }
 </style>
