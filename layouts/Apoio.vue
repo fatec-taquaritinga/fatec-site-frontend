@@ -4,9 +4,7 @@
             <h1>Empresas apoiadoras</h1>
             <p>Conheça empresas que apoiam Fatec Taquaritinga</p>
 
-            <!--( carrossel de imagens de parceiros )-->
-            <!--<div style="margin-top:40px;width:80%;height:80px;margin:auto;background:#fff;"></div>-->
-            <carrocel-parceiros></carrocel-parceiros>
+            <carrossel-parceiros></carrossel-parceiros>
 
             <div id="depoimentos">
 
@@ -43,10 +41,10 @@
 </template>
 
 <script>
-    import CarrocelParceiros from './Carrocel-parceiros.vue'
+    import CarrosselParceiros from './Carrossel-parceiros.vue'
 
     export default {
-        components: { CarrocelParceiros }
+        components: { CarrosselParceiros }
     }
 </script>
 
@@ -69,11 +67,9 @@
         text-align:Center;
         color:#3a5461;
         font-size:1.2em;
-        margin-bottom:40px;
     }
 
     #depoimentos{
-        padding-top:80px;
         width:80%;
         margin:auto;
         margin-bottom:100px;

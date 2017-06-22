@@ -41,8 +41,8 @@
             }
         },
         mounted() {
-            //const carrossel       = document.querySelector(".carrossel")
-            const item            = document.querySelector(".carrossel .item")
+            //const carrossel      = document.querySelector(".carrossel")
+            const item             = document.querySelector(".carrossel .item")
             this.totalImgs         = this.imgs.length
             this.setCarrosselWidth(parseInt(item.clientWidth) + (parseInt(item.clientWidth) * this.totalImgs))
             
@@ -75,7 +75,7 @@
                 let marginPadding = 30
                 let numImages
 
-                if( window.innerWidth <= 768  )numImages = 2
+                if( window.innerWidth <= 992  )numImages = 2
                 else numImages = 4
 
                 this.ident = 0
@@ -93,14 +93,12 @@
     }
 
     .box_carrossel{
-        width:80%;
-        margin: 10% auto;
+        width:82%;
+        margin:3% auto;
         position:relative;
         padding:10px 30px;
         background-color:#fff;
         overflow:hidden;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 
     .box_carrossel .nav{
