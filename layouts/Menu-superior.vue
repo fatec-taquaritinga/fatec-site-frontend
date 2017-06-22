@@ -1,6 +1,6 @@
 <template>
     <el-row id="menu-superior">
-        <el-col id="red-menu" :xs="24" :md="24" >
+        <el-col id="red-menu" :xs="24" :md="24" :style="{background:fundo}" >
 
             <el-col id="content-red-menu" :md="{span:12,offset:10}" :lg="{span:10,offset:12}" >
 
@@ -33,6 +33,12 @@
   import Events    from '../components/Events.js'
 
   export default {
+    props: ["colorDefault"],
+    data(){
+        return{
+            fundo:this.colorDefault
+        }
+    },
     methods: {
       openModal(){
         Events.$emit('modal')
@@ -42,7 +48,7 @@
 </script>
 
 <style>
-    #red-menu{display:none;height:32px;background-color:#b01116;}
+    #red-menu{display:none;height:32px;}
     #content-red-menu{height:32px;display:flex;justify-content:space-between;color:#fff;font-size:.8em;cursor:pointer;}
     #content-red-menu img{filter:brightness(500%);margin-right:1%;width:12%;}
 

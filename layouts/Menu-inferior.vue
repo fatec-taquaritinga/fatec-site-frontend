@@ -1,13 +1,12 @@
 <template>
-    <el-row id="parent-menu-inf">
+    <el-row id="parent-menu-inf" :style="{borderTop:'3px solid'+colorDefault}">
 
         <el-col id="parentLogo" :xs="{span:7, offset:1}" :sm="{span:4, offset:1}" :md="{span:3, offset:2}">
             <img src="../assets/logos/logo.svg" />
         </el-col>
         
-        
         <el-col id="menu-inf"  :sm="{span:10, offset:2}" >
-           <div class="active" :style="{opacity:opacidade, width:largura,left:distancia}" ></div>
+           <div class="active" :style="{opacity:opacidade, width:largura,left:distancia, backgroundColor:colorDefault}" ></div>
            
            <el-popover ref="popover1" placement="bottom" width="200" trigger="hover">
                 <span class="link-popover sub-divisao-pop">Sobre a Fatec</span>
@@ -50,7 +49,6 @@
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover3>Acadêmico</span>
 
 
-
            <el-popover ref="popover3" placement="bottom" width="200" trigger="hover">
                 <span class="link-popover">Inscrições</span>
                 <span class="link-popover">Provas e gabaritos</span>
@@ -66,7 +64,7 @@
         </el-col>
 
         <el-col id="menu-mobile" :xs="{span:5, offset:10}" :sm="{span:5, offset:14}">
-            <label for="mobile" ><i class="material-icons">menu</i></label>
+            <label for="mobile" ><i :style="{color:colorDefault}" class="material-icons">menu</i></label>
         </el-col>
 
     </el-row>
@@ -74,6 +72,7 @@
 
 <script>
   export default {
+    props: ["colorDefault"],
     data(){
         return{
             menuAtivo:false,
@@ -82,7 +81,19 @@
             distancia:'0'
         }
     },
+    mounted(){
+        for(let l of document.querySelectorAll(".link-popover")){
+            l.addEventListener("mouseenter", e=>e.currentTarget.style.background = this.colorDefault)
+            l.addEventListener("mouseout", e=> e.currentTarget.style.background = "#fff")
+        }
 
+        for(let d of document.querySelectorAll(".sub-divisao-pop")) d.style.color=this.colorDefault
+
+        for(let s of document.querySelectorAll("#menu-inf span")){
+            s.addEventListener("mouseenter", e=> e.currentTarget.style.color=this.colorDefault)
+            s.addEventListener("mouseout", e=> e.currentTarget.style.color="#4A555C")
+        }
+    },
     methods: {
         animateActive(e){
             let position = e.currentTarget.offsetLeft
@@ -103,24 +114,24 @@
 
 
 <style>
-#parent-menu-inf{left:0;right:0;border-top:3px solid #b01116;position:fixed;z-index:4;}
+#parent-menu-inf{left:0;right:0;position:fixed;z-index:4;background-color:#fff;}
 .icon-curso{width:10px;height:10px;margin-right:5px;}
 .link-popover{display:flex;align-items:center;font-size:1.1em;cursor:pointer;line-height:18px;color:#4A555C;padding:1%;padding-left:5%;}
-.link-popover:hover{background-color:#b01116;color:#fff;}
-.sub-divisao-pop{color:#b01116;pointer-events:none;margin-top:8px;}
+.link-popover:hover{color:#fff !important;}
+.sub-divisao-pop{pointer-events:none;margin-top:8px;}
 
 .el-popover{padding:0;border:none;}
-.active{bottom:0;top:110px;height:3px;width:110px;position:absolute;transition:150ms ease-in-out;opacity:0;background-color:#b01116;}
+.active{bottom:0;top:113px;height:3px;width:110px;position:absolute;transition:150ms ease-in-out;opacity:0;}
 
 #parentLogo{height:81px;display:flex;align-items:center;}
 #parentLogo img{width:85%;height:70%;max-height:75%;}
 
 #menu-inf{display:none;height:80px;font-size:.9em;color:#4A555C;}
 #menu-inf span{z-index:3;padding-left:2%;display:flex;align-items:center;padding-right:2%;cursor:pointer;text-align:center;}
-#menu-inf span:hover{color:#b01116;transition:1s;}
+#menu-inf span:hover{transition:1s;}
 
 #menu-mobile{height:74px;display:flex;align-items:center;justify-content:space-around;}
-#menu-mobile i{padding:3%;font-size:2.3em;color:#b01116;cursor:pointer;}
+#menu-mobile i{padding:3%;font-size:2.3em;cursor:pointer;}
 
 #logomarcas{display:none;height:81px;justify-content:flex-end;}
 #logomarcas img:first-child{width:20%;margin-right:2%;}
@@ -136,6 +147,4 @@
     #menu-inf span{font-size:1em;}
     #parent-menu-inf{border:none;position:static;}
 }
-
-
 </style>
