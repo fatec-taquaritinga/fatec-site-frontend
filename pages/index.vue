@@ -6,14 +6,20 @@
     
     <menu-fixo></menu-fixo>
     <menu-mobile></menu-mobile>
-    <menu-superior></menu-superior>
-    <menu-inferior></menu-inferior>
+    <menu-superior colorDefault="#B01116" ></menu-superior>
+    <menu-inferior colorDefault="#B01116" ></menu-inferior>
 
-    <app-banner></app-banner>
+    <app-banner>
+        <img  class="el-banner" slot="imagem"  src="../assets/banner.jpg" v-if="!video" >
+        <video class="el-banner" id="video" autoplay muted  loop src="video.mp4" v-if="video" ></video>
+    </app-banner>
+
+
     <app-cursos></app-cursos>
     <app-apoio></app-apoio>
     <app-noticias></app-noticias>
     <app-footer></app-footer>
+
   </el-row>
 </template>
 
@@ -40,7 +46,9 @@
       return {
         dialogVisible:false,
         largura: '20%',
-        view: '0'
+        view: '0',
+
+        video:true
       }
     },
 

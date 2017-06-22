@@ -6,12 +6,18 @@
 	
 		<menu-fixo></menu-fixo>
         <menu-mobile></menu-mobile>
-		<menu-superior></menu-superior>
-		<menu-inferior></menu-inferior>
-        
-        <curso-banner></curso-banner>
-        <curso-content></curso-content>
+		<menu-superior colorDefault="#00A0E6" ></menu-superior>
+		<menu-inferior colorDefault="#00A0E6" ></menu-inferior>
 
+        <app-banner>
+            <img  class="el-banner" slot="imagem"  src="http://blog.portalpravaler.com.br/wp-content/uploads/2015/08/curso-de-sistemas-de-informacao.jpg" v-if="!video" >
+        </app-banner>
+
+        <div class="barra-banner">
+            <p>Curso Superior de Graduação, modalidade presencial | Duração: 6 meses | Período: Manhã</p>
+        </div>
+
+        <curso-content></curso-content>
         <app-apoio></app-apoio>
 
         <el-row class="galeria-curso">
@@ -69,7 +75,7 @@
 </template>
 
 <script>
-    import CursoBanner from '../../layouts/cursos/Banner.vue'
+    import AppBanner from '../../layouts/Banner.vue'
     import CursoContent from '../../layouts/cursos/Content.vue'
     import AppApoio from '../../layouts/Apoio.vue';
     import AppFooter from '../../layouts/Footer.vue';
@@ -82,7 +88,7 @@
 	  
     export default {
         components: {
-            CursoBanner, CursoContent, AppApoio, AppFooter, menuSuperior, menuInferior, menuMobile, menuFixo
+            AppBanner, CursoContent, AppApoio, AppFooter, menuSuperior, menuInferior, menuMobile, menuFixo
         },
 		
 		data() {
@@ -199,4 +205,14 @@
         color: #fff;
     }
 
+    .barra-banner {
+        margin-top: -4px;
+        width: 100%;
+        height: 8%;
+        background-color: #00a0e6;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: 1%;
+    }
 </style>
