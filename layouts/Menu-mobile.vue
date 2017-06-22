@@ -49,6 +49,7 @@
         left:-300px;
         box-shadow:2px 2px 2px #ccc;
         z-index:2000;
+        opacity:0;
     }
 
     nav{
@@ -74,6 +75,7 @@
     }
 
     #mobile:checked ~ .barra{
+        opacity:1;
         transform:translateX(300px);
     }
 

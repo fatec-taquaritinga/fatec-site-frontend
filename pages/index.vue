@@ -4,8 +4,11 @@
       REALIZAR PESQUISA
     </el-dialog>
     
+    <menu-fixo></menu-fixo>
     <menu-mobile></menu-mobile>
-    <app-topo></app-topo>
+    <menu-superior></menu-superior>
+    <menu-inferior></menu-inferior>
+
     <app-banner></app-banner>
     <app-cursos></app-cursos>
     <app-apoio></app-apoio>
@@ -15,18 +18,22 @@
 </template>
 
 <script>
-  import AppTopo   from '../layouts/Topo.vue';
+  import menuSuperior from '../layouts/Menu-superior.vue';
+  import menuInferior from '../layouts/Menu-inferior.vue';
+  import menuMobile from   '../layouts/Menu-mobile.vue';
+  import menuFixo from   '../layouts/Menu-fixo.vue';
+
   import AppBanner from '../layouts/Banner.vue';
   import AppCursos from '../layouts/Cursos.vue';
   import AppApoio from '../layouts/Apoio.vue';
   import AppNoticias from '../layouts/Noticias.vue';
   import AppFooter from '../layouts/Footer.vue';
-  import menuMobile from   '../layouts/Menu-mobile.vue';
+
   import Events    from '../components/Events.js'
 
   export default {
     components: {
-      AppTopo, AppBanner, AppCursos, AppApoio, AppNoticias, AppFooter, menuMobile
+      AppBanner, AppCursos, AppApoio, AppNoticias, AppFooter, menuMobile, menuSuperior, menuInferior, menuFixo
     },
 
     data() {
@@ -41,11 +48,11 @@
         window.onscroll = () => {
             let top = window.pageYOffset || document.documentElement.scrollTop
 
-            if( (top > 90) && ( window.innerWidth > 992) ){
-                document.getElementById("menu-superior").style.display='none'
+            if( (top > 200) && ( window.innerWidth > 992) ){
+              document.getElementById("menu-fixo").classList.add("menu-fixo")
 
-            }else{
-                document.getElementById("menu-superior").style.display='block' 
+            }else if( (top < 800) && ( window.innerWidth > 992) ){
+              document.getElementById("menu-fixo").classList.remove("menu-fixo")
             }
         },
 
@@ -68,3 +75,11 @@
     }
   }
 </script>
+
+
+<style>
+    .menu-fixo{
+        top:0px !important;
+        transition:top 1s;
+    }
+</style>

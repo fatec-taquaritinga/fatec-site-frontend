@@ -9,90 +9,88 @@
 
         <el-col id="cursos" :xs="{span:20, offset:2}" :sm="{span:20, offset:2}" :md="{span:20, offset:2}"  >
             
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#2bb673;">Agronegócio</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#2bb673;">Saiba Mais...</div>
                 </div>
-            </el-card>
+            </div>
 
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#2e3192;">Análise e desenvolvimento de sistemas</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#2e3192;">Saiba Mais...</div>
                 </div>
-            </el-card>
+            </div>
 
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#ed1c24;">Produção Industrial</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#ed1c24;">Saiba Mais...</div>
                 </div>
-            </el-card>
+            </div>
 
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#00aeef;">Sistemas para internet</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#00aeef;">Saiba Mais...</div>
                 </div>
-            </el-card>
+            </div>
 
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#00a79d;">Gestão Empresarial (EaD)</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#00a79d;">Saiba Mais...</div>
                 </div>
-            </el-card>
+            </div>
 
-            <el-card class="cards" :body-style="{padding:0}">
-                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg" class="image" />
+            <div class="cards" :body-style="{padding:0}">
+                <img src="../assets/cursos/cards.png" class="image" />
                 <div class="info-curso" >
                     <h1 style="color:#a70000;">Gestão da Produção Industrial</h1>
                     <h2><strong>Período:</strong> Tarde ou noite</h2>
                     <div class="btn-curso" style="background-color:#a70000;" >Saiba Mais...</div>
                 </div>
-            </el-card>
-
+            </div>
             
         </el-col>
-
-
     </el-row>
 </template>
 
 
 <style>
-    .el-card{
+    .cards{
+        margin:auto;
         margin-bottom:20px;
-        max-width:400px;
-        height:290px;
+        max-width:500px;
+        border-radius:7px;
+        border:1px solid #eee;
+        box-shadow: 5px 5px 5px #eee;
+        overflow:hidden;
     }
 
-    .cards{
-        width:100%;
-        margin:auto;
-        margin-bottom:30px;
-    }
     .image{
-        width:100%;
-        height:170px;
+        max-width:100%;
+        max-height:400px;
+        width: auto;
+        height: auto;
     }
 
     .info-curso h1{
         text-align:center;
-        font-size:1.1em;
+        font-size:1.2em;
         color:#2bb673;
-        height:35px;
+        height:45px;
     }
 
     .info-curso h2{
@@ -123,7 +121,6 @@
     #titulo-cursos{
         min-height:200px;
         text-align:center;
-        padding-top:30px;
         padding-bottom:30px;
     }
 
@@ -142,8 +139,9 @@
 
 @media screen and (min-width: 758px)
 {
-    .el-card{
+    .cards{
         width:48%;
+        max-height:400px;
     }
     #cursos{
         display:flex;
@@ -154,11 +152,10 @@
 
 @media screen and (min-width: 992px)
 {
-    .el-card{
-        width:32%;
-    }
     .cards{
+        width:32%;
         margin-bottom:16px;
     }
+
 }
 </style>

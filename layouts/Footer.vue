@@ -2,10 +2,13 @@
     <el-row>
         <iframe wframeborder="0"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4416.693979282836!2d-48.51795703353!3d-21.42994720655985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b93bd3b48e7047%3A0x1808de33145ee4e0!2sFatec+Taquaritinga!5e0!3m2!1spt-BR!2sbr!4v1496014369733" allowfullscreen></iframe>
 
+        <hr style="border:1px solid #b01116">
+        <hr style="border:1px solid #fff">
+
         <el-col id="footer" :span="24">
             <el-col id="footer-content" :span="20" :offset="2">
 
-                <img width="200" src="../assets/logos/logo-footer.svg" />
+                <img width="150" src="../assets/logos/logo-footer.svg" />
                 
 
                 <div class="box">
@@ -30,8 +33,10 @@
 
 <style>
     #footer{
-        background-color:#3a5461;
+        background-color:#b01116;
         color: #fff;
+        padding-top:1%;
+        padding-bottom:1%;
     }
 
     #footer-content{
@@ -48,10 +53,8 @@
     }
 
     .box i{
-        font-size:3em;
+        font-size:2.3em;
         cursor:pointer;
-        border:1px solid #fff;
-        border-radius:50% !important;
         margin-left:20px;
     }
 
@@ -67,10 +70,4 @@
         border:0;
         margin-top:50px;
     }
-
-    @media screen and (min-width: 992px)
-    {
-
-    }
-
 </style>

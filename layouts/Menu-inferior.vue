@@ -1,34 +1,26 @@
 <template>
-    <el-row >
+    <el-row id="parent-menu-inf">
 
         <el-col id="parentLogo" :xs="{span:7, offset:1}" :sm="{span:4, offset:1}" :md="{span:3, offset:2}">
             <img src="../assets/logos/logo.svg" />
         </el-col>
         
+        
         <el-col id="menu-inf"  :sm="{span:10, offset:2}" >
            <div class="active" :style="{opacity:opacidade, width:largura,left:distancia}" ></div>
-
-           <el-popover ref="popover1" placement="bottom" width="265" trigger="hover">
-                <span class="link-popover sub-divisao-pop">Quem somos</span>
-                <span class="link-popover">Sobre a Fatec</span>
+           
+           <el-popover ref="popover1" placement="bottom" width="200" trigger="hover">
+                <span class="link-popover sub-divisao-pop">Sobre a Fatec</span>
+                <span class="link-popover">Quem somos</span>
+                <span class="link-popover">Departamentos</span>
                 <span class="link-popover">Regimento e Regulamento</span>
+                <span class="link-popover">Horários de funcionamento</span>
                 <span class="link-popover">Concursos</span>
                 <span class="link-popover">WebSAI</span>
-                <span class="link-popover  sub-divisao-pop">Departamentos</span>
-                <span class="link-popover">Direção</span>
-                <span class="link-popover">Coordenação de Cursos</span>
-                <span class="link-popover">Diretoria de Serviços Acadêmicos</span>
-                <span class="link-popover">Diretoria de Serviços Administrativos</span>
-                <span class="link-popover">Coord. de Laboratórios de Informática</span>
-                <span class="link-popover">Coord. de Laboratórios de Produção</span>
-                <span class="link-popover">Biblioteca</span>
-                <span class="link-popover">Horários de funcionamento</span>
-                <span class="link-popover">Fale conosco</span>
            </el-popover>
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover1>Institucional</span>
 
-
-           <el-popover ref="popover2" placement="bottom" width="265" trigger="hover" content="Cursos">
+           <el-popover ref="popover2" placement="bottom" width="270" trigger="hover" content="Cursos">
                 <span class="link-popover sub-divisao-pop">Graduação presencial</span>
                 <span class="link-popover"><div style="background-color:#2bb673;" class="icon-curso" ></div> Agronegócio</span>
                 <span class="link-popover"><div style="background-color:#2e3192;" class="icon-curso" ></div>Análise e Desenvolvimento de Sistemas</span>
@@ -37,40 +29,31 @@
                 <span class="link-popover sub-divisao-pop">Graduação à distância (EAD)</span>
                 <span class="link-popover"><div style="background-color:#00a79d;" class="icon-curso" ></div>Gestão Empresarial</span>
                 <span class="link-popover sub-divisao-pop">Pós-graduação</span>
-                <span class="link-popover">Especialização em Gestão da Produção Industrial</span>
-                <span class="link-popover sub-divisao-pop">Extensão Tecnológica</span>
-                <span class="link-popover">Sobre a Extensão Tecnológica</span>
+                <span class="link-popover">Pós-Graduação em Gestão da Produção Industrial </span>
+                <span class="link-popover sub-divisao-pop">Cursos extracurriculares</span>
+                <span class="link-popover">Extensão Tecnológica</span>
            </el-popover>
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover2>Cursos</span>
 
-
-
-           <el-popover ref="popover3" placement="bottom" width="265" trigger="hover">
+           <el-popover ref="popover3" placement="bottom" width="200" trigger="hover">
                 <span class="link-popover sub-divisao-pop">Publicações</span>
                 <span class="link-popover">Revista interface Tecnológica</span>
-                <span class="link-popover">Transparência</span>
-                <span class="link-popover">Grupos de estudo e pesquisa</span>
-                <span class="link-popover sub-divisao-pop">Empresa Junior</span>
-                <span class="link-popover">Sobre a Empresa Júnior</span>
-                <span class="link-popover sub-divisao-pop">Pós-graduação</span>
-                <span class="link-popover">Gestão Empresarial</span>
+                <span class="link-popover">Grupos de Pesquisa</span>
+                <span class="link-popover">Empresa Junior</span>
+                <span class="link-popover">Diretório Acadêmico</span>
                 <span class="link-popover sub-divisao-pop">Informações Gerais</span>
-                <span class="link-popover">Diretório acadêmico</span>
-                <span class="link-popover">Extensão Tecnológica</span>
                 <span class="link-popover">Calendário Letivo</span>
                 <span class="link-popover">Horários de aulas</span>
                 <span class="link-popover">Horários de monitoria</span>
-                <span class="link-popover">Mapa das salas de aula</span>
-                <span class="link-popover">Identidade visual</span>
+                <span class="link-popover">Mapa de salas</span>
            </el-popover>
-           <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover3>Área acadêmica</span>
+           <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover3>Acadêmico</span>
 
 
 
-           <el-popover ref="popover3" placement="bottom" width="265" trigger="hover">
+           <el-popover ref="popover3" placement="bottom" width="200" trigger="hover">
                 <span class="link-popover">Inscrições</span>
                 <span class="link-popover">Provas e gabaritos</span>
-                <span class="link-popover">Guia de profissões tecnológicas</span>
            </el-popover>
            <span @mouseenter="animateActive" @mouseout="hideActive" v-popover:popover3>Vestibular</span>
 
@@ -120,46 +103,38 @@
 
 
 <style>
-    .icon-curso{
-        width:10px;
-        height:10px;
-        margin-right:5px;
-    }
-
-
-.link-popover{display:flex;align-items:center;font-size:1.2em;cursor:pointer;line-height:20px;color:#4A555C;padding:1%;padding-left:5%;}
+#parent-menu-inf{left:0;right:0;border-top:3px solid #b01116;position:fixed;z-index:4;}
+.icon-curso{width:10px;height:10px;margin-right:5px;}
+.link-popover{display:flex;align-items:center;font-size:1.1em;cursor:pointer;line-height:18px;color:#4A555C;padding:1%;padding-left:5%;}
 .link-popover:hover{background-color:#b01116;color:#fff;}
-.sub-divisao-pop{color:#b01116;pointer-events:none;margin-top:15px;}
+.sub-divisao-pop{color:#b01116;pointer-events:none;margin-top:8px;}
 
 .el-popover{padding:0;border:none;}
+.active{bottom:0;top:110px;height:3px;width:110px;position:absolute;transition:150ms ease-in-out;opacity:0;background-color:#b01116;}
 
-.active{bottom:0;border-top:3px solid #b01116;width:110px;z-index:2;position:absolute;transition:150ms ease-in-out;opacity:0;}
-#parentLogo{height:10vh;display:flex;align-items:center;}
-#parentLogo img{width:95%;height:75%;max-height:80%;}
+#parentLogo{height:81px;display:flex;align-items:center;}
+#parentLogo img{width:85%;height:70%;max-height:75%;}
 
-#menu-inf{display:none;height:10vh;margin-top:2vh;font-size:.9em;color:#4A555C;}
-#menu-inf span{z-index:3;padding-left:2%;padding-right:2%;cursor:pointer;padding-top:2vh;text-align:center;}
+#menu-inf{display:none;height:80px;font-size:.9em;color:#4A555C;}
+#menu-inf span{z-index:3;padding-left:2%;display:flex;align-items:center;padding-right:2%;cursor:pointer;text-align:center;}
 #menu-inf span:hover{color:#b01116;transition:1s;}
 
-#menu-mobile{height:10vh;display:flex;align-items:center;justify-content:space-around;}
+#menu-mobile{height:74px;display:flex;align-items:center;justify-content:space-around;}
 #menu-mobile i{padding:3%;font-size:2.3em;color:#b01116;cursor:pointer;}
 
-#logomarcas{display:none;height:10vh;margin-top:1vh;}
+#logomarcas{display:none;height:81px;justify-content:flex-end;}
 #logomarcas img:first-child{width:20%;margin-right:2%;}
 #logomarcas img:last-child{width:45%;margin-left:2%;}
 
 
-/* SM */
-@media screen and (min-width: 768px){}
-
 /* MD */
 @media screen and (min-width: 992px)
 {
-    #parentLogo{height:12vh;}
     #menu-inf{display:flex;}
-    #logomarcas{display:flex;justify-content:flex-end;}
+    #logomarcas{display:flex;}
     #menu-mobile{display:none;}
     #menu-inf span{font-size:1em;}
+    #parent-menu-inf{border:none;position:static;}
 }
 
 
