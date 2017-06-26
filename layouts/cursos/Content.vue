@@ -7,7 +7,11 @@
                 <div class="sobre-curso">
                     <h1>Sobre o Curso</h1>
                     <p>O curso de Sistemas para Internet forma um tecnólogo que ocupa- se do desenvolvimento de programas, de interfaces e aplicativos, do comércio e do marketing eletrônicos, além de sítios e portais para internet e intranet. Gerencia projetos de sistemas, inclusive com acesso a banco de dados, desenvolvendo projetos de aplicações para a rede mundial de computadores e integra mídias nos sítios da internet. Atua com tecnologias emergentes como computação móvel, redes sem fio e sistemas distribuídos. Cuidar da implantação, atualização, manutenção e segurança dos sistemas para internet também são suas atribuições.</p>
-                    <p>Para mais informações, acessa a <a>Matriz Curricular</a> e os <a>Planos de Ensino</a> do curso.</p>
+                    
+                    <el-button class="button" type="primary">Matriz Curricular</el-button>
+                    <el-button class="button" type="primary">Planos de Ensino</el-button>
+                    <el-button class="button" type="primary">Ementa</el-button>
+
                 </div>
             </el-col>
         </el-col>
@@ -45,6 +49,14 @@
     .sobre-curso p {
         margin-top: 3vh;
         text-align: justify;
+    }
+
+    /*.sobre-curso > .button {
+        margin-left: 2vh;
+    }*/
+
+    .button {
+        margin-top: 2vh;
     }
 
     @media screen and (min-width:480px) { 
