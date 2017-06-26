@@ -9,115 +9,26 @@
 
         <el-col id="cursos" :xs="{span:20, offset:2}" :sm="{span:20, offset:2}" :md="{span:20, offset:2}"  >
             
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#2bb673;">Agronegócio</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#2bb673;">Saiba Mais...</div>
-                </div>
-            </div>
-
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#2e3192;">Análise e desenvolvimento de sistemas</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#2e3192;">Saiba Mais...</div>
-                </div>
-            </div>
-
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#ed1c24;">Produção Industrial</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#ed1c24;">Saiba Mais...</div>
-                </div>
-            </div>
-
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#00aeef;">Sistemas para internet</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#00aeef;">Saiba Mais...</div>
-                </div>
-            </div>
-
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#00a79d;">Gestão Empresarial (EaD)</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#00a79d;">Saiba Mais...</div>
-                </div>
-            </div>
-
-            <div class="cards" :body-style="{padding:0}">
-                <img src="../assets/cursos/cards.png" class="image" />
-                <div class="info-curso" >
-                    <h1 style="color:#a70000;">Gestão da Produção Industrial</h1>
-                    <h2><strong>Período:</strong> Tarde ou noite</h2>
-                    <div class="btn-curso" style="background-color:#a70000;" >Saiba Mais...</div>
-                </div>
-            </div>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#2BB673" nome="Agronegócio" periodo="Tarde ou Noite" ></cursos-card>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#2E319F" nome="Análise e desenvolvimento de sistemas" periodo="Tarde ou Noite" ></cursos-card>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#ED1C24" nome="Produção Industrial" periodo="Tarde ou Noite" ></cursos-card>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#00BFF5" nome="Sistemas para internet" periodo="Tarde ou Noite" ></cursos-card>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#00A79D" nome="Gestão Empresarial (EaD)" periodo="Tarde ou Noite" ></cursos-card>
+            <cursos-card img="http://www.fumec.br/blog/wp-content/uploads/2016/04/cursos-a-distancia-EAD.jpg" colorDefault="#A70000" nome="Gestão da Produção Industrial" periodo="Tarde ou Noite" ></cursos-card>
             
         </el-col>
     </el-row>
 </template>
 
+<script>
+    import cursosCard from '../components/Card.vue'
+
+    export default {
+        components:{cursosCard}
+    }
+</script>
 
 <style>
-    .cards{
-        margin:auto;
-        margin-bottom:20px;
-        max-width:500px;
-        border-radius:7px;
-        border:1px solid #eee;
-        box-shadow: 5px 5px 5px #eee;
-        overflow:hidden;
-    }
-
-    .image{
-        max-width:100%;
-        max-height:400px;
-        width: auto;
-        height: auto;
-    }
-
-    .info-curso h1{
-        text-align:center;
-        font-size:1.2em;
-        color:#2bb673;
-        height:45px;
-    }
-
-    .info-curso h2{
-        text-align:center;
-        color:#58595b;
-        font-size:.9em;
-        font-weight:normal;
-    }
-
-    .btn-curso{
-        width:110px;
-        color:#fff;
-        border-radius:5px;
-        margin:auto;
-        padding:7px;
-        text-align:center;
-        margin-bottom:30px;
-        margin-top:8px;
-        cursor:pointer;
-        font-size:.8em;
-    }
-
-    .btn-curso:hover{
-        opacity:.8;
-    }
-
-
     #titulo-cursos{
         min-height:200px;
         text-align:center;
@@ -133,29 +44,11 @@
         font-size:1.1em;
     }
     
-
-
-
-
-@media screen and (min-width: 758px)
-{
-    .cards{
-        width:48%;
-        max-height:400px;
+    @media screen and (min-width: 758px)
+    {
+        #cursos{
+            display:flex;
+            flex-wrap:wrap;
+        }
     }
-    #cursos{
-        display:flex;
-        flex-wrap:wrap;
-    }
-}
-
-
-@media screen and (min-width: 992px)
-{
-    .cards{
-        width:32%;
-        margin-bottom:16px;
-    }
-
-}
 </style>
